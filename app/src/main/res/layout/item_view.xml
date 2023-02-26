@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/cream_bg"
+    android:id="@+id/quizlayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!--Quiz Question Layout for Recycler View-->
+<!--So that each question, even dynamic, will have the same format-->
+
+<!--  Black Border Above Question -->
+    <TextView
+        android:id="@+id/topbanner"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/quiz_border_bg"
+        app:layout_constraintBottom_toTopOf="@id/itemviewQuestion"/>
+
+<!--    Question for Quiz  -->
+    <TextView
+        android:id="@+id/itemviewQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:text="Test"
+        android:background="@color/material_dynamic_neutral_variant90"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_below="@+id/topbanner" />
+
+<!--  Black Border Below Question  -->
+    <TextView
+        android:id="@+id/bottomborder"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/quiz_border_bg"
+        android:layout_below="@id/itemviewQuestion"/>
+
+<!--    Choice Radio Buttons  -->
+    <RadioGroup
+        android:orientation="vertical"
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/material_dynamic_neutral_variant90"
+        android:clickable="true"
+        android:layout_below="@id/bottomborder"
+        android:focusable="true">
+
+        <RadioButton
+            android:id="@+id/answer1"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/answer2"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/answer3"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/answer4"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+
+<!--  Black Border Below Radio Buttons  -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/quiz_border_bg"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup"/>
+
+</RelativeLayout>
